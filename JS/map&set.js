@@ -1,4 +1,4 @@
-'use strict'
+'use strict';
 
 var map = new Map();
 var set = new Set();
@@ -41,3 +41,37 @@ console.log(set);
 
 
 //Map和Set是ES6标准新增的数据类型，请根据浏览器的支持情况决定是否要使用。
+
+
+//iterable类型
+
+//Array、Map和Set都属于iterable类型。
+var newA = ["23",233,true];
+newA.name = "hhh";
+for(var x in newA){
+	console.log(`forin结果为：${x}`);  //forin结果为：0 forin结果为：1 forin结果为：2  forin结果为：name
+}
+
+for(var x of newA){
+	console.log(`forof结果为：${x}`);  //forof结果为：23 forin结果为：233 forin结果为：true
+}
+
+//iterable内置的forEach方法
+newA.forEach(function(E,I,A){
+	// E: 指向当前元素的值
+    // I: 指向当前索引
+    // A: 指向Array对象本身
+    console.log(`元素：${E},索引：${I},对象：${A}`);
+});
+
+
+
+
+
+
+
+
+
+
+
+
