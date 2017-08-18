@@ -56,8 +56,9 @@ for(var x of newA){
 	console.log(`forof结果为：${x}`);  //forof结果为：23 forin结果为：233 forin结果为：true
 }
 
-//iterable内置的forEach方法
-newA.forEach(function(E,I,A){
+var newB = ["23",233,true];
+//iterable内置的forEach方法--Array
+newB.forEach(function(E,I,A){
 	// E: 指向当前元素的值
     // I: 指向当前索引
     // A: 指向Array对象本身
@@ -65,9 +66,24 @@ newA.forEach(function(E,I,A){
 });
 
 
+var newS = new Set([1,2,3,4,5,"a",false]);
+//iterable内置的forEach方法--Set  Set没有索引，因此回调函数的前两个参数都是元素本身
+newS.forEach(function(E,I,A){
+	// E: 指向当前元素的值
+    // I: 指向当前元素的值
+    // A: 指向Set对象本身
+    console.log(`元素：${E},索引：${I},对象：${A}`);
+});
 
 
-
+var newM = new Map([[1,2],[3,4],[5,"a"],["boolean",false]]);
+//iterable内置的forEach方法--Map  Map的回调函数参数依次为value、key和map本身：
+newM.forEach(function(E,I,A){
+	// E: value
+    // I: key
+    // A: 指向Map对象本身
+    console.log(`value：${E},key：${I},对象：${A}`);
+});
 
 
 
