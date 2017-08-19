@@ -36,7 +36,7 @@ newArr.pop();  //将原数组中最后一个元素删除
 console.log(newArr); 
 newArr.unshift("路人甲","路人乙");   //给原数组开头添加元素
 console.log(newArr); 
-newArr.shift();   //讲原数组第一个元素删除
+newArr.shift();   //将原数组第一个元素删除
 console.log(newArr); 
 newArr.sort();  //数组排序
 console.log(newArr);
